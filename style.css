@@ -1,0 +1,748 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family: 'Gotham';
+}
+
+@font-face {
+    font-family: 'Gotham'; 
+    src: url('fonts/gotham') format('truetype'); 
+    font-style: normal;
+  }
+  
+
+body{
+    font-family: "Gotham", sans-serif;
+}
+
+/*header*/
+#header {
+    position: sticky;
+    top: -60px; 
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background-color: #290042; 
+    padding: 20px;
+    width: 100%;
+    transition: top 0.3s ease, background-color 0.3s ease;
+}
+
+body:has(#header:hover) #header {
+    top: 0;
+    background-color:  #290042; 
+}
+
+.main-navigation{
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main-navigation ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 900px;
+    margin-top: 10px;
+}
+
+.main-navigation ul li{
+    display: inline-block;
+    width: auto;
+    list-style: none;
+    position: relative;
+}
+
+.main-navigation ul li a{
+    text-decoration: none;
+    text-align: center;
+    background-color: #F7C421;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: block;
+    padding: 10px 20px;
+    transition: all 0.5s;
+    color: #290042;
+}
+
+.main-navigation ul li a:hover{
+    border-radius:45px;
+    background-color: #f7c421;
+    transform: scale(1.1);
+    color: #F4F4FF;
+}
+
+label[for="hamburguer-menu"],
+#hamburguer-menu{
+    display: none;
+}
+
+/*inicio*/
+#inicio{
+    height: fit-content;
+}
+
+.inicio_container{
+    background-color:#290042;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.title{
+    font-family: "Gotham", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #F4F4FF;
+    font-weight: bold;
+    width: 55%;
+    margin-top: 2rem;
+}
+
+.title h2{
+    font-family: "Gotham", sans-serif;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: #F4F4FF;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.subtitle{
+    font-family: "Gotham", sans-serif;
+    font-weight: lighter;
+    color: #F4F4FF;
+    font-weight: bold;
+    width: 55%;
+}
+
+.subtitle h3{
+    margin: 30px;
+    font-size: 1.4rem;
+}
+
+/*video*/
+.container_video {
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/*boton wpp*/
+#contacto-calendar{
+    background-color:  #F4F4FF;
+    width: 100%;  
+    height: 300px;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    box-sizing: border-box;  
+}
+
+.contacto-calendar{ 
+    text-align: left; 
+}
+
+.contacto-calendar h2{
+    color:  #290042;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+    width: 85%;
+}
+
+.contacto-calendar p{
+    color: #290042;
+    font-size: 24px;
+    margin-top: 10px;
+    width: 70%;
+}
+
+.whatsapp-button-calendar {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    gap: 10px; 
+    padding: 20px 20px; 
+    background-color: #DA601E; 
+    color:#F4F4FF;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius:20px;
+    text-decoration: none;
+    transition: all 0.5s;
+    margin-left: 20px;
+    width: fit-content; 
+}
+
+.whatsapp-button-calendar:hover {
+    transform: scale(1.1);
+    background-color: #f7c421;
+}
+
+/*casos*/
+#gallery-section{
+    height: fit-content;
+    background-color: #290042;
+    padding: 60px;
+}
+
+.gallery_container h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    color: #F4F4FF;
+    text-shadow: 2px 2px 3px rgba(156, 156, 156, 0.3);
+}
+
+.galeria-filas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.galeria-filas img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*sobre mi*/
+#sobre-mi{
+    height: fit-content;
+    background-color:#F4F4FF;
+    padding: 60px;
+}
+
+.sobremi_container h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 60px;
+    color:    #290042;
+    text-shadow: 2px 2px 3px rgba(156, 156, 156, 0.3);
+}
+
+.sobremi_contenedor {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 100px;
+}
+
+.sobremi_galeria {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.sobremi_item {
+    text-align: center;
+    margin-bottom: 15px; 
+}
+
+.sobremi_item img {
+    width: 400px; 
+    border-radius: 15px; 
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sobremi_item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color:#444; 
+    font-weight: bold;
+}
+
+.sobremi_textos {
+    flex: 1; 
+    max-width: 600px; 
+}
+
+.sobremi_columna {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.sobremi_columna p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px; 
+}
+
+/*preguntas*/
+#preguntas_frecuentes{
+    background-color:#F4F4FF ;
+}
+
+.questions-container h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    color:   #290042;
+    text-shadow: 2px 2px 3px rgba(156, 156, 156, 0.3);
+}
+
+.questions-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 70px;
+    height: auto;
+}
+
+.questions-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #F4F4FF;
+}
+
+.question {
+    font-size: 18px;
+    padding: 15px 0;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    color: #444;
+    list-style: none;
+}
+
+.question::-webkit-details-marker {
+    display: none;
+}
+
+.question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #da601e;
+}
+
+details[open] .question::after {
+    content: '−';
+    color: #da601e;
+}
+
+.questions-answer {
+    font-size: 16px;
+    padding: 0 0 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/*contacto*/
+#contacto{
+    background-color:  #290042;
+    width: 100%;  
+    height: 300px;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    box-sizing: border-box;  
+}
+
+.info_contacto{ 
+    max-width: 40%; 
+    text-align: left; 
+}
+
+.info_contacto h2{
+    color:#F4F4FF;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    width: 85%;
+}
+
+.info_contacto p{
+    color:#F4F4FF;
+    font-size: 24px;
+    margin-top: 10px;
+    width: 70%;
+}
+
+.whatsapp-button {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    gap: 10px; 
+    padding: 20px 20px; 
+    background-color: #DA601E; 
+    color: #F4F4FF;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius:20px;
+    text-decoration: none;
+    transition: all 0.5s;
+    margin-left: 20px;
+    width: fit-content; 
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    background-color: #f7c421;
+}
+
+/*carrusel*/
+#testimonios {
+    background-color:#F4F4FF ;
+    text-align: center;
+    padding: 50px; 
+    padding-bottom: 100px;
+}
+
+.carousel-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 60px;
+    color:    #290042;
+    text-shadow: 2px 2px 3px rgba(156, 156, 156, 0.3);
+}
+
+#carouselExample img {
+    height: 400px; 
+    object-fit:contain; 
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    z-index: 10; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    height: 100px;
+    width: 100px; 
+    border-radius: 50%;
+    background-color: #da601e;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev:hover, 
+.carousel-control-next:hover {
+    background-color: #f7c421;
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    filter: invert(100%); 
+    width: 35px; 
+    height: 35px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
+}
+
+/*footer*/
+footer {
+    background: #F4F4FF;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: left; 
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color:#da601e;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color:#290042;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color:#f7c421;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, opacity 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1); 
+    opacity: 0.8;
+}
+
+#info {
+    text-align: center;
+    padding: 10px 0;
+    background: #111;
+}
+
+#info p{
+    color: #F4F4FF;
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (min-width: 320px) and (max-width: 426px) {
+    /*header*/
+    .header {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        position: relative;
+        padding: 40px; 
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .main-navigation ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem; 
+        left: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 1.2rem;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        width: auto;
+        z-index: 999;
+    }
+
+    .main-navigation ul li {
+        max-width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .main-navigation ul li a {
+        border-radius: 2rem;
+    }
+
+    label[for="hamburguer-menu"] {
+        position: absolute;
+        left: 20px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 1rem;
+        width: 7vh;
+        height: 7vh;
+        user-select: none;
+        z-index: 1000;
+    }
+
+    #hamburguer-menu:checked ~ ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    /*inicio*/
+
+    .inicio_container .title{
+        font-family: "Gotham", sans-serif;
+        font-size: 1rem;
+        margin-top: 60px;
+        width: 80%;
+    }
+
+    .title h2{
+        font-size: 1rem;
+    }
+
+    .subtitle h3{
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    /*video*/
+    .container_video {
+        width: 95%; 
+    }
+
+    /*galeria*/
+
+    .galeria-filas img {
+        width: 100%; 
+    }
+
+    /*boton*/
+    #contacto-calendar {
+        flex-direction: column; 
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .contacto-calendar {
+        max-width: 90%; 
+        text-align: center;
+    }
+
+    .contacto-calendar h2 {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .contacto-calendar p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .whatsapp-button-calendar {
+        font-size: 16px;
+        padding: 12px 12px;
+        width: 90%;
+        max-width: 300px;
+        margin-top: 15px; 
+    }
+
+    /*boton wpp*/
+    #contacto, #contacto-b, #contacto-c {
+        flex-direction: column; 
+        text-align: center; 
+        padding-bottom: 20px;
+    }
+
+    .info_contacto {
+        max-width: 90%; 
+        text-align: center;
+    }
+
+    .info_contacto h2 {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .info_contacto p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .whatsapp-button {
+        font-size: 16px;
+        padding: 12px 12px;
+        width: 90%;
+        max-width: 300px;
+        margin-top: 15px; 
+    }
+
+    /*carrusel*/
+    #testimonios {
+        margin: 30px; 
+    }
+
+    .carousel-title {
+        font-size: 24px; 
+        padding-bottom: 30px;
+    }
+
+    #carouselExample img {
+        height: 250px; 
+        max-height: 250px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 15%; 
+        height: 20%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px; 
+        height: 15px;
+    }
+
+    /*sobre mi*/
+    .sobremi_contenedor {
+        flex-direction: column;
+        gap: 20px; 
+    }
+
+    .sobremi_container h2{
+        font-size: 24px;
+    }
+
+    .sobremi_item img {
+        width: 80%;
+    }
+
+    .sobremi_textos {
+        max-width: 100%;
+    }
+}
